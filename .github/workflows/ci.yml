@@ -78,5 +78,5 @@ jobs:
         if: always()
         with:
           name: junit-report
-          path: reports/
+          path: ./reports/
           retention-days: 7
