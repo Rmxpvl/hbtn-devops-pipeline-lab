@@ -56,12 +56,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Lint
         run: npm run lint
 
-      - name: Run the unit tests
-        run: npm run test:unit
-
-      - name: Run the integration tests
-        run: npm run test:integration
+      - name: Run the tests
+        env:
+          JEST_JUNIT_OUTPUT_DIR: ./reports
+        run: npm test -- --reporters=default --reporters=jest-junit
