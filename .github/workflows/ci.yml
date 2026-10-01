@@ -64,3 +64,11 @@ jobs:
         env:
           JEST_JUNIT_OUTPUT_DIR: ./reports
         run: npm test -- --reporters=default --reporters=jest-junit
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: junit-report
+          path: reports/
+          retention-days: 7
