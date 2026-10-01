@@ -1,3 +1,4 @@
+
 'use strict';
 
 const { healthPayload } = require('../../src/routes/health');
