@@ -43,20 +43,20 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
-     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install-deps
-
-      - name: Run the unit tests
-        run: npm run test:unit
-
-      - name: Run the integration tests
-        run: npm run test:integration
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Install dependencies
+      run: npm install-deps
+    
+    - name: Run the unit tests
+      run: npm run test:unit
+    
+    - name: Run the integration tests
+      run: npm run test:integration
